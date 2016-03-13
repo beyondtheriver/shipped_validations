@@ -1,0 +1,19 @@
+<% if current_user %>
+  <%= form_for @job do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :con_require %>
+  <%= f.text_field :con_require%><br>
+  <%= f.label :cost %>
+  <%= f.text_field :cost%><br>
+  <%= f.label :cargo %>
+  <%= f.text_field :cargo%><br>
+  <%= f.label :origin %>
+  <%= f.text_field :origin%><br>
+  <%= f.label :destination %>
+  <%= f.text_field :destination%><br>
+
+  <%= f.hidden_field :boat_id, :value => @boat.id %>
+  <%= f.submit "New job" %>
+  <% end %>
+<% end %>
