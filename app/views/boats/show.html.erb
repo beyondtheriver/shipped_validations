@@ -1,29 +1,35 @@
-<%= @boat.name  %><br>
-<%= @boat.con_capacity %><br>
-<%= @boat.location %><br>
-<%= form_for @job do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :con_require %>
-  <%= f.text_field :con_require%><br>
-  <%= f.label :cost %>
-  <%= f.text_field :cost%><br>
-  <%= f.label :cargo %>
-  <%= f.text_field :cargo%><br>
-  <%= f.label :origin %>
-  <%= f.text_field :origin%><br>
-  <%= f.label :destination %>
-  <%= f.text_field :destination%><br>
+<div id="boatinfo">
+  <%= @boat.name %><br>
+  <%= @boat.con_capacity %><br>
+  <%= @boat.location %><br>
+</div>
+<div id="jobform">
+  <%= form_for @job do |f| %>
+    <%= f.label :name, ("Job Name") %>
+    <%= f.text_field :name %><br>
+    <%= f.label :con_require, ("Container Requirement") %>
+    <%= f.text_field :con_require%><br>
+    <%= f.label :cost %>
+    <%= f.text_field :cost%><br>
+    <%= f.label :cargo %>
+    <%= f.text_field :cargo%><br>
+    <%= f.label :origin %>
+    <%= f.select :origin, ["San Fran", "New Bedford", "Nantucket", "Miami", "Philadelphia", "LA", "Baltimore", "Montevideo"]%><br>
+    <%= f.label :destination %>
+    <%= f.select :destination, ["San Fran", "New Bedford", "Nantucket", "Miami", "Philadelphia", "LA", "Baltimore", "Montevideo"]%><br>
 
-  <%= f.hidden_field :boat_id, :value => @boat.id %>
-  <%= f.submit "New Job" %>
-<% end %>
+    <%= f.hidden_field :boat_id, :value => @boat.id %>
+    <%= f.submit "New Job", :id => "newjobbutton" %>
+  <% end %>
+</div>
 <% @jobs.each do |job| %>
+<div id="joblist">
  Name: <%= job.name %><br>
  Containers Required: <%= job.con_require %><br>
  Cost: $<%= job.cost %><br>
  Cargo: <%= job.cargo %><br>
  Origin: <%= job.origin %><br>
  Destination: <%= job.destination %><br>
+</div><br>
 <% end %>
 
