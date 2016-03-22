@@ -2,3 +2,25 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+html {
+   font-family: sans-serif;
+}
+#boatinfo {
+   font-size: 2em;
+}
+#jobform {
+   border: 3px solid black;
+   display: table-caption;
+}
+#newjobbutton {
+   width: 100px;
+   height: 40px;
+   font-size: 1.2em;
+   border-radius: 10%;
+   background-color: red;
+   padding: 5px;
+}
+#joblist {
+   background-color:rgba(0, 0, 0, 0.5);
+   color: white;
+}

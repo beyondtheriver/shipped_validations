@@ -2,3 +2,62 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+html {
+  background: url("http://img.nauticexpo.com/images_ne/photo-g/36807-5616747.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 {
+   text-align: center;
+   font-size: 2em;
+   font-family: sans-serif;
+}
+.buttons{
+
+}
+#loginbutton {
+   width: 100px;
+   height: auto;
+   font-size: 1.2em;
+   border-radius: 10%;
+   background-color: #0080ff;
+   margin-bottom: 20px;
+   padding: 5px;
+   display: inline-block;
+}
+#signupbutton {
+   width: 100px;
+   height: auto;
+   font-size: 1.2em;
+   border-radius: 10%;
+   background-color: #005ab3;
+   padding: 5px;
+   display: inline-block;
+}
+#newboat {
+   font-size: 1.2em;
+   background-color: black;
+   opacity: .75;
+   border-radius: 10%;
+   padding: 5px;
+   margin-bottom: 20px;
+   display: inline-block;
+}
+#boatinfo {
+   font-size: 2em;
+   background-color:rgba(0, 0, 0, 0.5);
+   color: white;
+   padding: 10px 0px 10px 10px;
+}
+#logoutbutton {
+
+   font-size: 1.2em;
+   border-radius: 10%;
+   background-color: #0080ff;
+   padding: 5px;
+   text-align: center;
+   display: inline-block;
+   margin-top: 20px;
+}

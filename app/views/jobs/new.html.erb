@@ -11,7 +11,7 @@
   <%= f.label :origin %>
   <%= f.text_field :origin%><br>
   <%= f.label :destination %>
-  <%= f.text_field :destination%><br>
+  <%= f.select :destination, ["San Fran", "New Bedford", "Nantucket", "Miami", "Philadelphia", "LA", "Baltimore", "Montevideo"]%><br>
 
   <%= f.hidden_field :boat_id, :value => @boat.id %>
   <%= f.submit "New job" %>
