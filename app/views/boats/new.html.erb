@@ -1,3 +1,4 @@
+<%= flash[:alert] if flash[:alert] %>
 <% if current_user %>
   <%= form_for @boat do |f| %>
   <%= f.label :name %>

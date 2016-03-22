@@ -2,14 +2,23 @@ class BoatsController < ApplicationController
   def new
     @boat = Boat.new
   end
+
   def create
-    @boat = Boat.create(boat_params)
-    redirect_to '/'
+    @boat = Boat.new(boat_params)
+    if @boat.save
+      redirect_to '/'
+    else
+      flash[:alert] = @boat.errors.full_messages
+      redirect_to '/boats/new'
+    end
   end
+
   def destroy
   end
+
   def update
   end
+
   def show
     @boat = Boat.find(params[:id])
     @job = Job.new
