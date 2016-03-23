@@ -6,7 +6,7 @@
   <%= f.label :con_capacity %>
   <%= f.text_field :con_capacity %><br>
   <%= f.label :location %>
-  <%= f.text_field :location%><br>
+  <%= f.select :location, ["San Fran", "New Bedford", "Nantucket", "Miami", "Philadelphia", "LA", "Baltimore", "Montevideo"]%><br>
 
   <%= f.hidden_field :user_id, :value => current_user.id.to_i %>
   <%= f.submit "New Boat" %>

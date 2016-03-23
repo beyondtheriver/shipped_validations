@@ -4,8 +4,12 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.create(job_params)
-    redirect_to '/'
+    @job = Job.new(job_params)
+    if @job.save
+    else
+      flash[:error] = @job.errors.full_messages
+    end
+    redirect_to(:back)
   end
 
   def destroy
