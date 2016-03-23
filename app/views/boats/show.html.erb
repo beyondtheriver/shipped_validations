@@ -3,6 +3,7 @@
   <%= @boat.con_capacity %><br>
   <%= @boat.location %><br>
 </div>
+<%= flash[:error] if flash[:error] %>
 <div id="jobform">
   <%= form_for @job do |f| %>
     <%= f.label :name, ("Job Name") %>
@@ -32,4 +33,5 @@
  Destination: <%= job.destination %><br>
 </div><br>
 <% end %>
+<%= link_to "Home", '/' %><br>
 
